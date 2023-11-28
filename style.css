@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'roboto-bold';
+  src: url('assets/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'roboto-regular';
+  src: url('assets/fonts/Roboto-Regular.ttf');
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #242742;
+  font-family: roboto-regular;
+}
+
+.container {
+  background: white;
+  display: flex;
+  max-width: 65vw;
+  max-height: 80vh;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.signup {
+  width: 370px;
+  height: fit-content;
+  margin-top: 45px;
+  margin-left: 30px;
+  margin-right: 50px;
+  border: 1px solid red;
+}
+
+.signup h1 {
+  font-size: 3.4rem;
+  font-family: roboto-bold;
+  margin-bottom: 20px;
+} 
+
+/* .image {
+  justify-self: end;
+} */
+
+img {
+  height: 60vh;
+}
+
+.list {
+  margin: 15px;
+  margin-bottom: 20px;
+}
+
+label,
+.submit-btn {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.modal {
+  width: 30vw;
+  height: 65vh;
+  padding: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
