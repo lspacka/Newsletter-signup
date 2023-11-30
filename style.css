@@ -15,6 +15,7 @@
 }
 
 body {
+  padding: 25px;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -27,48 +28,73 @@ body {
 .container {
   background: white;
   display: flex;
-  max-width: 75vw;
-  max-height: 80vh;
+  max-width: 85vw;
+  max-height: 100vh;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .signup {
   height: fit-content;
-  /* margin-top: 40px; */
-  margin-left: 30px;
+  margin-top: 15px;
+  margin-left: 35px;
   margin-right: 50px;
-  font-size: 0.89rem;
-  padding-top: 20px;
-  border: 1px solid red;
+  font-size: 0.87rem;
+  padding-top: 45px;
+  /* border: 1px solid red; */
 }
 
 .signup h1 {
-  font-size: 3rem;
+  font-size: 2.94rem;
   font-family: roboto-bold;
   margin-bottom: 15px;
+  /* border: 1px solid orange; */
 } 
 
 .signup > :not(h1) {
-  line-height: 1.5rem;
+  line-height: 1.4rem;
 }
 /* 
 .image {
   width: 44px;
 } */
 
-img {
+.image img {
   /* width: 100%; */
-  height: 70vh;
+  height: 80vh;
 }
 
 .list {
-  margin: 15px;
-  margin-bottom: 25px;
+  margin: 20px 0 30px; 
+  list-style-type: none;
 }
 
-label {
-  font-size: 0.8rem;
+.list img {
+  margin-right: 15px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chk-icon {
+  max-width: 19px;
+  max-height: 19px;
+}
+
+/* form {
+  width: 100%;
+} */
+
+.labels {
+  display: flex;
+}
+
+label,
+.error {
+  font-size: 0.66rem;
   font-weight: bold;
 }
 
@@ -78,44 +104,107 @@ label,
   margin-bottom: 3px;
 }
 
+.error {
+  display: inline;
+  /* justify-self:end; */
+}
+
 input {
   outline: none;
   margin-bottom: 20px;
   width: 100%;
-  height: 50px;
+  height: 40px;
+  border: 1px solid gray;
+  /* align-items: center; */
   border-radius: 7px;
-  padding: 20px;
+  padding-left: 20px;
 }
 
 .submit-btn {
+  outline: none;
   width: 100%;
-  height: 50px;
-  background: hsl(234, 29%, 20%);
+  height: 40px;
+  background: #242742;
   color: white;
   border: none;
   border-radius: 7px;
+  font-family: roboto-bold;
+  font-size: 0.8rem;
+}
+
+.success-email {
+  font-weight: bold;
 }
 
 .modal {
-  width: 30vw;
-  height: 65vh;
+  z-index: 1;
+  width: 36vw;
+  height: 73vh;
   padding: 50px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 20px;
+  color: #36384e;
+  font-family: roboto-regular;
 }
 
 .modal img {
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 70px;
+  max-height: 70px;
+  margin-bottom: 30px;
+}
+
+.modal h1 {
+  font-family: roboto-bold;
+  font-size: 2.9rem;
+  line-height: 3rem;
+  margin-bottom: 20px;
+}
+
+.modal p {
+  line-height: 1.7rem;
+}
+
+.dismiss-btn {
+  width: 100%;
+  margin-top: 40px;
+  height: 50px;
+  background: #242742;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-family: roboto-bold;
+  font-size: 0.8rem;
+}
+
+button:hover {
+  background: var(--gradient-1, linear-gradient(225deg, #ff6a3a 0%, #ff527b 100%));
+  box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+  transform: scale(1.025);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #242742; /* Adjust the alpha value for transparency */
+  display: none;
 }
 
 .attribution { 
-  font-size: 11px; 
-  text-align: center; 
+  font-size: 0.7rem; 
+  text-align: center;
+  color: white; 
+  align-self: end;
+  position: fixed;
+  left: 50;
 }
 
 .attribution a { 
-  color: hsl(228, 45%, 44%); 
+  color: hsl(229, 17%, 52%); 
 }
