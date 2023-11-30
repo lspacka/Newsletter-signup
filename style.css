@@ -1,4 +1,5 @@
 * {
+  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -88,12 +89,13 @@ li {
   width: 100%;
 } */
 
-.labels {
-  display: flex;
+fieldset {
+  border: none;
 }
 
-label,
-.error {
+.labels {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.66rem;
   font-weight: bold;
 }
@@ -105,8 +107,7 @@ label,
 }
 
 .error {
-  display: inline;
-  /* justify-self:end; */
+  color: red;
 }
 
 input {
@@ -149,6 +150,7 @@ input {
   border-radius: 20px;
   color: #36384e;
   font-family: roboto-regular;
+  animation: showr ease-in 0.39s forwards;
 }
 
 .modal img {
@@ -178,6 +180,7 @@ input {
   border-radius: 7px;
   font-family: roboto-bold;
   font-size: 0.8rem;
+  outline: none;
 }
 
 button:hover {
@@ -192,19 +195,15 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #242742; /* Adjust the alpha value for transparency */
+  background: #242742; 
   display: none;
 }
 
-.attribution { 
-  font-size: 0.7rem; 
-  text-align: center;
-  color: white; 
-  align-self: end;
-  position: fixed;
-  left: 50;
-}
-
-.attribution a { 
-  color: hsl(229, 17%, 52%); 
+@keyframes showr {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }

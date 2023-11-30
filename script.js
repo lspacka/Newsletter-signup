@@ -6,31 +6,60 @@ const modal = document.querySelector('.modal')
 const dismiss_btn = document.querySelector('.dismiss-btn')
 const overlay = document.querySelector('.overlay')
 const email = document.querySelector('.success-email')
+const error_msg = document.querySelector('.error')
+const regex = /^[^\s@]+@[^\s@]+\.(?=[a-zA-Z]{2,})[^\s@]+$/
+
+// input.checkValidity(false)
+// form.addEventListener('submit', e => {
+//     e.preventDefault()
+//     modal.show()
+//     overlay.style.display = 'block'
+// })
+
+// submit_btn.addEventListener('click', () => {
+//     if (!input.value) {
+//         error_msg.innerText = 'Email cannot be empty'
+//     } else if (!regex.test(input.value)) {
+//         error_msg.innerText = 'Valid email required'
+//     }
+//     email.innerText = input.value
+// })
+
+// dismiss_btn.addEventListener('click', () => { 
+//     modal.close() 
+//     overlay.style.display = 'none'
+// })
 
 form.addEventListener('submit', e => {
     e.preventDefault()
-    modal.show()
-    if (input.value.includes('@')) {
-        input.classList.remove('error')
-        error.textContent = ''
+    // Check email validity before showing the modal
+    if (isValidEmail(input.value)) {
+        modal.show()
+        overlay.style.display = 'block'
+    } else  {
+        error_msg.innerText = 'Valid email required'
     }
-    overlay.style.display = 'block'
-    email.innerText = input.value
-})
+});
 
 submit_btn.addEventListener('click', () => {
-    // input.setCustomValidity = ''
-    if (input.value == '' || !input.value.includes('@')) {
-        form.classList.add('error')
-        error.textContent = 'Enter valid email'
+    // Check email validity before updating the email element
+    if (isValidEmail(input.value)) {
+        email.innerText = input.value
+        error_msg.innerText = ''
     } else {
-        input.classList.remove('error')
-        error.textContent = ''
+        error_msg.innerText = 'Valid email required'
     }
-})
+});
 
-dismiss_btn.addEventListener('click', () => { 
-    modal.close() 
+dismiss_btn.addEventListener('click', () => {
+    modal.close()
     overlay.style.display = 'none'
-    input.value = ''
+});
+
+function isValidEmail(email) {
+    return regex.test(email)
+}
+
+input.addEventListener('input', () => {
+    error_msg.innerText = ''
 })
