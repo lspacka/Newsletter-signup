@@ -9,27 +9,6 @@ const email = document.querySelector('.success-email')
 const error_msg = document.querySelector('.error')
 const regex = /^[^\s@]+@[^\s@]+\.(?=[a-zA-Z]{2,})[^\s@]+$/
 
-// input.checkValidity(false)
-// form.addEventListener('submit', e => {
-//     e.preventDefault()
-//     modal.show()
-//     overlay.style.display = 'block'
-// })
-
-// submit_btn.addEventListener('click', () => {
-//     if (!input.value) {
-//         error_msg.innerText = 'Email cannot be empty'
-//     } else if (!regex.test(input.value)) {
-//         error_msg.innerText = 'Valid email required'
-//     }
-//     email.innerText = input.value
-// })
-
-// dismiss_btn.addEventListener('click', () => { 
-//     modal.close() 
-//     overlay.style.display = 'none'
-// })
-
 form.addEventListener('submit', e => {
     e.preventDefault()
     // Check email validity before showing the modal
