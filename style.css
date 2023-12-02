@@ -78,7 +78,6 @@ svg {
   order: 1;
   /* max-width: 375px; */
   /* padding-top: 45px; */
-  border: 1px solid red;
 }
 
 /* @media screen and (min-width: 500px) {
@@ -189,8 +188,12 @@ input {
 
 .modal {
   z-index: 1;
-  width: 36vw;
-  height: 73vh;
+  /* width: 36vw; */
+  width: 90%;
+  max-width: 450px;
+  /* height: 73vh; */
+  height: auto;
+  max-height: 75vh;
   padding: 50px;
   position: fixed;
   top: 50%;
