@@ -74,18 +74,18 @@ svg {
   /* margin-top: 15px; */
   margin-left: 35px;
   margin-right: 50px;
-  font-size: 0.87rem;
+  font-size: 0.99rem;
   order: 1;
   /* max-width: 375px; */
   /* padding-top: 45px; */
   border: 1px solid red;
 }
 
-@media screen and (min-width: 500px) {
+/* @media screen and (min-width: 500px) {
   .signup {
     margin: 4.5rem 2.5rem;
   }
-}
+} */
 
 @media screen and (min-width: 500px) {
   .image {
@@ -96,22 +96,25 @@ svg {
 }
 
 .signup h1 {
-  font-size: 3.5rem;
+  font-size: 3.37rem;
   font-family: roboto-bold;
-  margin-bottom: 15px;
-  /* transform: translateY(-15px); */
+  margin-bottom: 45px;
 } 
 
 .signup > :not(h1) {
   line-height: 1.4rem;
 }
 
+.signup p,
+.list {
+  transform: translateY(-26px);
+}
+/* 
 .image {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 85vh; */
-}
+} */
 
 /* .image img {
   max-height: 85vh;
