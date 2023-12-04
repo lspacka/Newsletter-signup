@@ -1,9 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/*performance wise, what is the best way to load fonts*/
 @font-face {
   font-family: 'roboto-bold';
   src: url('assets/fonts/Roboto-Bold.ttf');
@@ -14,8 +9,22 @@
   src: url('assets/fonts/Roboto-Regular.ttf');
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
 body {
-  /* padding: 25px; */
   min-height: 100vh;
   background: #242742;
   color: #36384e;
@@ -31,71 +40,40 @@ body {
   }
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
 .container {
   background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* max-width: 375px; */
   min-height: 100vh;
-  padding: 15px;
+  padding: 18px;
   border-radius: 25px;
 }
-/* 
-@media screen and (min-width: 700px) {
-  .container {
-    max-width: 928px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: auto;
-  }
-} */
 
 @media screen and (min-width: 700px) {
   .container {
-      flex-direction: row; /* Arrange items side by side on larger screens */
+      flex-direction: row; 
       justify-content: space-between;
-      /* min-height: auto; */
   }
 }
 
 .signup {
   height: fit-content;
-  /* margin-top: 15px; */
   margin-left: 35px;
   margin-right: 50px;
   font-size: 0.99rem;
   order: 1;
-  /* max-width: 375px; */
-  /* padding-top: 45px; */
 }
 
-/* @media screen and (min-width: 500px) {
-  .signup {
-    margin: 4.5rem 2.5rem;
-  }
-} */
-
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .image {
     order: 2;
     max-width: 400px;
-    min-height: 70vh; /**/
   }
 }
 
 .signup h1 {
-  font-size: 3.37rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-family: roboto-bold;
   margin-bottom: 45px;
 } 
@@ -108,23 +86,13 @@ svg {
 .list {
   transform: translateY(-26px);
 }
-/* 
-.image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .image img {
-  max-height: 85vh;
-} */
 
 .list {
   margin: 20px 0 30px; 
   list-style-type: none;
 }
 
-.list img {
+.checkmark {
   margin-right: 15px;
 }
 
@@ -132,11 +100,6 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-}
-
-.chk-icon {
-  max-width: 19px;
-  max-height: 19px;
 }
 
 fieldset {
@@ -188,10 +151,8 @@ input {
 
 .modal {
   z-index: 1;
-  /* width: 36vw; */
   width: 90%;
   max-width: 450px;
-  /* height: 73vh; */
   height: auto;
   max-height: 75vh;
   padding: 50px;
@@ -203,7 +164,7 @@ input {
   border-radius: 20px;
   color: #36384e;
   font-family: roboto-regular;
-  /* animation: showr ease-in 0.10s forwards; */
+  /* animation: showr ease-in .10s forwards; */
 }
 
 .modal img {
