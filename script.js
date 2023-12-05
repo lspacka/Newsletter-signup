@@ -11,7 +11,6 @@ const regex = /^[^\s@]+@[^\s@]+\.(?=[a-zA-Z]{2,})[^\s@]+$/
 
 form.addEventListener('submit', e => {
     e.preventDefault()
-    // Check email validity before showing the modal
     if (isValidEmail(input.value)) {
         modal.show()
         overlay.style.display = 'block'
@@ -21,7 +20,6 @@ form.addEventListener('submit', e => {
 });
 
 submit_btn.addEventListener('click', () => {
-    // Check email validity before updating the email element
     if (isValidEmail(input.value)) {
         email.innerText = input.value
         error_msg.innerText = ''
