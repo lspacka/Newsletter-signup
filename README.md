@@ -20,8 +20,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-html-css-javascript-8yFS6MBH0l)
-- Live Site URL: (https://lspacka.github.io/Newsletter-signup/)
+- [Solution](https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-html-css-javascript-8yFS6MBH0l)
+- [Live Site](https://lspacka.github.io/Newsletter-signup/)
 
 ### Built with
 
