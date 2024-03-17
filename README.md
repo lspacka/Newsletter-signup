@@ -21,7 +21,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-html-css-javascript-8yFS6MBH0l)
-- [Live Site](https://lspacka.github.io/Newsletter-signup/)
+- [Live Site](https://lspacka.github.io/FEM-newsletter-signup/)
 
 ### Built with
 
